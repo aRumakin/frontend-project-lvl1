@@ -10,7 +10,6 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
-    "type": "module",
     "url": "git+https://github.com/aRumakin/frontend-project-lvl1.git"
   },
   "author": "",
@@ -18,6 +17,16 @@
   "bugs": {
     "url": "https://github.com/aRumakin/frontend-project-lvl1/issues"
   },
-  "homepage": "https://github.com/aRumakin/frontend-project-lvl1#readme"
+  "type": "module",
+  "homepage": "https://github.com/aRumakin/frontend-project-lvl1#readme",
+  "dependencies": {
+    "readline-sync": "^1.4.10"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.15.7",
+    "@babel/core": "^7.15.8",
+    "@babel/node": "^7.15.8",
+    "@babel/preset-env": "^7.15.8",
+    "@types/readline-sync": "^1.4.4"
+  }
 }
-
