@@ -1,13 +1,10 @@
 #Makefile
 
-install: 
-	install-deps
+install:
+	npm ci
 
 run:
 	bin/brain-games.js
-
-install-deps:
-	npm ci --dry-run
 
 publish:
 	npm publish --dry-run
