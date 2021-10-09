@@ -5,4 +5,4 @@
 
 [![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
 
-[![GitHub Actions Demo](https://github.com/aRumakin/frontend-project-lvl1/actions/workflows/github-actions-demo.yml/badge.svg?branch=main)](https://github.com/aRumakin/frontend-project-lvl1/actions/workflows/github-actions-demo.yml)
+[![github-actions-test](https://github.com/aRumakin/frontend-project-lvl1/actions/workflows/github-linter-test.yml/badge.svg?branch=main&event=push)](https://github.com/aRumakin/frontend-project-lvl1/actions/workflows/github-linter-test.yml)
