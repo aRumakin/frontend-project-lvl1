@@ -1,4 +1,4 @@
-name: github-actions-test
+name: github-linter-test
 
 on:
   push:
@@ -6,7 +6,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-latest
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         node-version: [14.x]
