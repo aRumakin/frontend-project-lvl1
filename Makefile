@@ -11,3 +11,5 @@ publish:
 
 make lint:
 	npx eslint .
+
+.PHONY: test
