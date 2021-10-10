@@ -2,7 +2,7 @@
 
 import readlineSync from 'readline-sync';
 
-export default () => {
+const isEven = () => {
   console.log('Welcome to the Brain Games!');
 
   const askName = readlineSync.question('May I have your name? ');
@@ -12,7 +12,7 @@ export default () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
   function getRandomNumber() {
-    return Math.abs(Math.random() * 1000);
+    return Math.floor(Math.random() * 1000);
   }
   for (let i = 1; i <= 3; i += 1) {
     const number = getRandomNumber();
@@ -22,16 +22,18 @@ export default () => {
       if (ans === 'yes') {
         console.log('Correct!');
       } else {
-        console.log(`Let's try again, ${askName}!`);
-        return console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
+        console.log("'no' is wrong answer ;(. Correct answer was 'yes'.");
+        return console.log(`Let's try again, ${askName}!`);
       }
     } else if (number % 2 !== 0) {
       if (ans === 'no') {
         console.log('Correct!');
       } else {
-        console.log(`Let's try again, ${askName}!`);
-        return console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
+        console.log("'yes' is wrong answer ;(. Correct answer was 'no'.");
+        return console.log(`Let's try again, ${askName}!`);
       }
     }
   } return console.log(`Congratulations, ${askName}!`);
 };
+
+isEven();
