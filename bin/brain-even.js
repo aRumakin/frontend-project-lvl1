@@ -4,10 +4,16 @@ import readlineSync from 'readline-sync';
 
 export default () => {
   console.log('Welcome to the Brain Games!');
+
   const askName = readlineSync.question('May I have your name? ');
+
   console.log(`Hello, ${askName}!`);
+
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
-  const getRandomNumber = () => Math.abs(Math.random() * 1000);
+
+  function getRandomNumber() {
+    return Math.abs(Math.random() * 1000);
+  }
   for (let i = 1; i <= 3; i += 1) {
     const number = getRandomNumber();
     console.log(`Question: ${number}`);
