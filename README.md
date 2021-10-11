@@ -8,4 +8,10 @@
 
 [![github-actions-test](https://github.com/aRumakin/frontend-project-lvl1/actions/workflows/github-linter-test.yml/badge.svg?branch=main&event=push)](https://github.com/aRumakin/frontend-project-lvl1/actions/workflows/github-linter-test.yml)
 
+### Brain-even
+
 https://asciinema.org/a/gAv74QRoEiztGEXjhVbP738Oy
+
+### Brain-calc
+
+https://asciinema.org/a/VnZri9pGTA1dFo7ifKRRb9C84
