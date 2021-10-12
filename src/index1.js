@@ -43,3 +43,34 @@ export function cycle() {
     }
   } return congrats();
 }
+
+export function isPrime() {
+  for (let i = 1; i <= 3; i += 1) {
+    console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
+    const isPrimeNumber = getRandomNumber(10000);
+    console.log(`Question: ${isPrimeNumber}`);
+    const isPrimeAnswer = readlineSync.question('Your answer: ');
+    let result = '';
+    for (let j = 2; j <= isPrimeNumber / 2; j += 1) {
+      if (isPrimeNumber % j !== 0) {
+        result = true;
+      } else {
+        result = false;
+        break;
+      }
+    }
+    if (isPrimeAnswer === 'yes' && result === true) {
+      console.log('Correct!');
+    } else if (isPrimeAnswer === 'yes' && result === false) {
+      console.log(`'${isPrimeAnswer}' is a wrong answer ;(. Correct answer was 'no'.`);
+      return tryAgain();
+    } else if (isPrimeAnswer === 'no' && result === false) {
+      console.log('Correct!');
+    } else if (isPrimeAnswer === 'no' && result === true) {
+      console.log(`'${isPrimeAnswer}' is a wrong answer ;(. Correct answer was 'yes'.`);
+      return tryAgain();
+    } else {
+      return console.log('Type correct answer! >(');
+    }
+  } return congrats();
+}
