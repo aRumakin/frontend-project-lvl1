@@ -1,9 +1,5 @@
 #!/usr/bin/env node
 
-import { helloName, expression } from '../src/index.js';
+import brainCalc from '../src/games/calc.js';
 
-helloName();
-
-console.log('What is the result of the expression?');
-
-expression();
+brainCalc();
