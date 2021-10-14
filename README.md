@@ -2,9 +2,7 @@
 
 [![Actions Status](https://github.com/aRumakin/frontend-project-lvl1/workflows/hexlet-check/badge.svg)](https://github.com/aRumakin/frontend-project-lvl1/actions)
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/codeclimate/codeclimate/test_coverage)
+[![Maintainability](https://api.codeclimate.com/v1/badges/7adf18d8bfa59547fcbd/maintainability)](https://codeclimate.com/github/aRumakin/frontend-project-lvl1/maintainability)
 
 [![github-actions-test](https://github.com/aRumakin/frontend-project-lvl1/actions/workflows/github-linter-test.yml/badge.svg?branch=main&event=push)](https://github.com/aRumakin/frontend-project-lvl1/actions/workflows/github-linter-test.yml)
 
