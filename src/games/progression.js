@@ -5,12 +5,12 @@ import newGame from '../index.js';
 const gameQuestion = 'What number is missing in the progression?';
 
 function getRandomNumber(n) {
-  return Math.floor(Math.random() * n + 1);
+  return Math.floor(Math.random() * n);
 }
 
 function gameQuestionAnswer() {
   const lengthProgression = getRandomNumber(6) + 5;
-  const delta = getRandomNumber(5) + 2;
+  const delta = getRandomNumber(7) + 1;
   const firstNumber = getRandomNumber(40);
   const shadowNumber = getRandomNumber(lengthProgression);
   let rightAnswer = '';
@@ -28,6 +28,6 @@ function gameQuestionAnswer() {
   return [question, answer];
 }
 
-export default function brainGcd() {
+export default function brainProgression() {
   return newGame(gameQuestion, gameQuestionAnswer);
 }
