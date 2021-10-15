@@ -1,8 +1,5 @@
 #!/usr/bin/env node
 
-// eslint-disable-next-line import/named
-import { helloName, isPrime } from '../src/index1.js';
+import brainPrime from '../src/games/is-prime.js';
 
-helloName();
-
-isPrime();
+brainPrime();
