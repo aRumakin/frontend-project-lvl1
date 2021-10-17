@@ -1,4 +1,5 @@
-import newGame from '../index.js';
+import startGame from '../index.js';
+import getRandomNumber from '../mathematics.js';
 
 const gameQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
@@ -15,12 +16,12 @@ function isPrimeNumber(num1) {
 }
 
 const gameQuestionAnswer = () => {
-  const number = Math.floor(Math.random() * 10000 + 1);
+  const number = getRandomNumber(1, 10000);
   const questionNumber = `${number}`;
   const answer = String(isPrimeNumber(number));
   return [questionNumber, answer];
 };
 
 export default function brainPrime() {
-  return newGame(gameQuestion, gameQuestionAnswer);
+  return startGame(gameQuestion, gameQuestionAnswer);
 }

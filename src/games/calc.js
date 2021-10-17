@@ -1,15 +1,10 @@
-import newGame from '../index.js';
+import startGame from '../index.js';
+import getRandomNumber from '../mathematics.js';
 
 const gameQuestion = 'What is the result of the expression?';
 
-function getRandomNumber(n) {
-  return Math.floor(Math.random() * n);
-}
-
 function getExpression(num1, num2, operator) {
   let result = 0;
-
-  // eslint-disable-next-line default-case
   switch (operator) {
     case '+': result = num1 + num2;
       break;
@@ -17,15 +12,16 @@ function getExpression(num1, num2, operator) {
       break;
     case '*': result = num1 * num2;
       break;
+    default: throw new Error(`operation ${operator} is not supported`);
   }
   return [result];
 }
 
 const gameQuestionAnswer = () => {
-  const num1 = getRandomNumber(100);
-  const num2 = getRandomNumber(100);
-  const operatorNum = getRandomNumber(3);
+  const num1 = getRandomNumber(1, 100);
+  const num2 = getRandomNumber(1, 100);
   const operators = ['+', '-', '*'];
+  const operatorNum = getRandomNumber(0, operators.length);
   const operator = operators[operatorNum];
   const question = `${num1} ${operator} ${num2}`;
   const answer = String(getExpression(num1, num2, operator));
@@ -34,5 +30,5 @@ const gameQuestionAnswer = () => {
 };
 
 export default function brainCalc() {
-  return newGame(gameQuestion, gameQuestionAnswer);
+  return startGame(gameQuestion, gameQuestionAnswer);
 }

@@ -1,18 +1,13 @@
-/* eslint-disable max-len */
-
-import newGame from '../index.js';
+import startGame from '../index.js';
+import getRandomNumber from '../mathematics.js';
 
 const gameQuestion = 'What number is missing in the progression?';
 
-function getRandomNumber(n) {
-  return Math.floor(Math.random() * n);
-}
-
 function gameQuestionAnswer() {
-  const lengthProgression = getRandomNumber(6) + 5;
-  const delta = getRandomNumber(7) + 1;
-  const firstNumber = getRandomNumber(40);
-  const shadowNumber = getRandomNumber(lengthProgression);
+  const lengthProgression = getRandomNumber(5, 10);
+  const delta = getRandomNumber(3, 10);
+  const firstNumber = getRandomNumber(0, 100);
+  const shadowNumber = getRandomNumber(0, lengthProgression);
   let rightAnswer = '';
   const progression = [];
   for (let h = 1; h <= lengthProgression; h += 1) {
@@ -29,5 +24,5 @@ function gameQuestionAnswer() {
 }
 
 export default function brainProgression() {
-  return newGame(gameQuestion, gameQuestionAnswer);
+  return startGame(gameQuestion, gameQuestionAnswer);
 }
