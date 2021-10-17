@@ -22,7 +22,7 @@ const gameQuestionAnswer = () => {
   const num1 = getRandomNumber(1, 100);
   const num2 = getRandomNumber(1, 100);
   const operators = ['+', '-', '*'];
-  const operatorNum = getRandomNumber(0, operators.length);
+  const operatorNum = getRandomNumber(0, operators.length - 1);
   const operator = operators[operatorNum];
   const question = `${num1} ${operator} ${num2}`;
   const answer = String(getExpression(num1, num2, operator));
