@@ -12,7 +12,7 @@ function getExpression(num1, num2, operator) {
       break;
     case '*': result = num1 * num2;
       break;
-    default: throw new Error(`operation ${operator} is not supported`);
+    default: throw new Error(`operator ${operator} is not supported`);
   }
   return [result];
 }
