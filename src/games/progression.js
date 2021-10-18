@@ -15,7 +15,7 @@ function gameQuestionAnswer() {
   const lengthProgression = getRandomNumber(5, 10);
   const delta = getRandomNumber(3, 10);
   const firstNumber = getRandomNumber(0, 100);
-  const shadowNumber = getRandomNumber(0, lengthProgression);
+  const shadowNumber = getRandomNumber(0, lengthProgression - 1);
   const progression = getProgression(lengthProgression, firstNumber, delta);
   const rightAnswer = progression[shadowNumber];
   progression[shadowNumber] = '..';
