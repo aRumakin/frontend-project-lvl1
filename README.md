@@ -6,12 +6,6 @@
 
 [![github-actions-test](https://github.com/aRumakin/frontend-project-lvl1/actions/workflows/github-linter-test.yml/badge.svg?branch=main&event=push)](https://github.com/aRumakin/frontend-project-lvl1/actions/workflows/github-linter-test.yml)
 
-## Install
-
-```
-$ npm link
-```
-
 ## Install dependencies 
 
 ```
@@ -21,6 +15,14 @@ $ make install
 ```
 $ npm install readline-sync
 ```
+
+
+## Install
+
+```
+$ npm link
+```
+
 
 ## About Brain-Games
 
