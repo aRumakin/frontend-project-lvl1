@@ -1,21 +1,19 @@
 import startGame from '../index.js';
-import getRandomNumber from '../mathematics.js';
+import getRandomNumber from '../utils.js';
 
 const gameQuestion = 'What is the result of the expression?';
 
 function getExpression(num1, num2, operator) {
-  let result = 0;
   switch (operator) {
-    case '+': result = num1 + num2;
-      break;
-    case '-': result = num1 - num2;
-      break;
-    case '*': result = num1 * num2;
-      break;
+    case '+':
+      return num1 + num2;
+    case '-':
+      return num1 - num2;
+    case '*':
+      return num1 * num2;
     default:
-      break;
+      throw new Error(`operation ${operator} is not supported`);
   }
-  return [result];
 }
 
 const gameQuestionAnswer = () => {
