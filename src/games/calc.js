@@ -3,27 +3,27 @@ import getRandomNumber from '../utils.js';
 
 const gameQuestion = 'What is the result of the expression?';
 
-function getExpression(num1, num2, operator) {
+function getExpression(number1, number2, operator) {
   switch (operator) {
     case '+':
-      return num1 + num2;
+      return number1 + number2;
     case '-':
-      return num1 - num2;
+      return number1 - number2;
     case '*':
-      return num1 * num2;
+      return number1 * number2;
     default:
       throw new Error(`operation ${operator} is not supported`);
   }
 }
 
 const gameQuestionAnswer = () => {
-  const num1 = getRandomNumber(1, 100);
-  const num2 = getRandomNumber(1, 100);
+  const number1 = getRandomNumber(1, 100);
+  const number2 = getRandomNumber(1, 100);
   const operators = ['+', '-', '*'];
   const operatorNum = getRandomNumber(0, operators.length - 1);
   const operator = operators[operatorNum];
-  const question = `${num1} ${operator} ${num2}`;
-  const answer = String(getExpression(num1, num2, operator));
+  const question = `${number1} ${operator} ${number2}`;
+  const answer = String(getExpression(number1, number2, operator));
 
   return [question, answer];
 };

@@ -3,12 +3,13 @@ import getRandomNumber from '../utils.js';
 
 const gameQuestion = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-function isPrimeNumber(num) {
-  for (let j = 2; j <= num / 2; j += 1) {
-    if (num % j === 0) {
+function isPrimeNumber(number) {
+  for (let j = 2; j <= number / 2; j += 1) {
+    if (number % j === 0) {
       return false;
     }
-  } return true;
+  }
+  return true;
 }
 
 const gameQuestionAnswer = () => {

@@ -11,6 +11,12 @@ function getProgression(lengthProgression, firstNumber, delta) {
   return coll;
 }
 
+function getShadowProgression(array, shadowNumber) {
+  // eslint-disable-next-line no-param-reassign
+  array[shadowNumber] = '..';
+  return String(array.join(' '));
+}
+
 function gameQuestionAnswer() {
   const lengthProgression = getRandomNumber(5, 10);
   const delta = getRandomNumber(3, 10);
@@ -18,9 +24,8 @@ function gameQuestionAnswer() {
   const shadowNumber = getRandomNumber(0, lengthProgression - 1);
   const progression = getProgression(lengthProgression, firstNumber, delta);
   const rightAnswer = progression[shadowNumber];
-  progression[shadowNumber] = '..';
 
-  const question = String(progression.join(' '));
+  const question = getShadowProgression(progression, shadowNumber);
 
   const answer = String(rightAnswer);
 
